@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 app.get('/user/:requiredUser/:username', (req, res) => {
-    res.send(req.params.username.toLowerCase() == req.params.requiredUser.toLowerCase() ? 'x3waasItti x3waasItti' : 'انت مو غيده دز')
+    res.send(req.params.username.toLowerCase() == req.params.requiredUser.toLowerCase() ? 'x3waasItti x3waasItti' : ' ')
 });;
 
 app.listen(port, () => {
