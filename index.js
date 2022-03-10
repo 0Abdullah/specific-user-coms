@@ -3,11 +3,11 @@ let port = process.env.PORT || 3000
 const express = require('express');
 const app = express();
 
-app.get('/user/:requiredUser/:username', (req, res) => {
+app.get('/user/:requiredUser/:username/:msg', (req, res) => {
     if(req.params.username.toLowerCase() == req.params.requiredUser.toLowerCase()) {
-        res.send('x3waasItti x3waasItti')
+        res.send(req.params.msg)
     } else if(req.params.username.toLowerCase() == '3bdullahvv') {
-        res.send('@3bdullahVv انت احبك بابا')
+        res.send('@3bdullahVv حبيبي')
     } else {
         res.send(`@${req.params.username} انقلع`)
     }
